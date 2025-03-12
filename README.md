@@ -2,6 +2,7 @@
 NodeJS + Express + DB는 ...
 
 # npm install
+```
 npm list
 node-express-db@1.0.0 E:\workspace\node-express
 ├── cors@2.8.5
@@ -11,3 +12,4 @@ node-express-db@1.0.0 E:\workspace\node-express
 ├── mongoose@8.12.1
 ├── nodemon@3.1.9
 └── python@0.0.4
+```
