@@ -11,5 +11,12 @@ node-express-db@1.0.0 E:\workspace\node-express
 ├── module-alias@2.2.3
 ├── mongoose@8.12.1
 ├── nodemon@3.1.9
-└── python@0.0.4
+├── python@0.0.4
+└── uuid@11.1.0
 ```
+
+# MongoDB 설치방법
+ - 홈페이지에서 다운로드 후 설치
+ - mongod --dbpath C:\data
+
+

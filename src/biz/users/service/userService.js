@@ -1,51 +1,45 @@
 const User = require("@biz/users/model/user");
 
-const getAllUsers = () => {
+const getAllUsers = async () => {
     try {
-        console.log("#### service");
-        return User.find();
+        return await User.find();
     } catch (error) {
         throw new Error(error);
     }
 }
 
-const getUserById = (id) => {
+const getUserById = async (id) => {
     try {
-        return User.findById(id);
+        return await User.findById(id);
     } catch (error) {
         throw new Error(error);
     }
 }
 
-const createUser = (params) => {
+const createUser = async (params) => {
     try {
         const user = new User(params);
-        return user.save();
+        return await user.save();
     } catch (error) {
         throw new Error(error);
     }
 }
 
-const updateUser = (id, params) => {
-    /*
+const updateUser = async (id, params) => {
     try {
-        return User.findByIdAndUpdate(id, params);
+        
+        return await User.findByIdAndUpdate(id, params);
     } catch (error) {
         throw new Error(error);
     } 
-        */
-    console.log("#### updateUser ####");
 }
 
-const deleteUser = (id) => {
-    /*
+const deleteUser = async (id) => {
     try {
-        return User.findByIdAndDelete(id);
+        return await User.findByIdAndDelete(id);
     } catch (error) {
         throw new Error(error);
     }
-        */
-       console.log("#### deleteUser ####");
 }
 
 module.exports = {
