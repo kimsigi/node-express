@@ -17,6 +17,6 @@ node-express-db@1.0.0 E:\workspace\node-express
 
 # MongoDB 설치방법
  - 홈페이지에서 다운로드 후 설치
- - mongod --dbpath C:\data
+ - mongod --dbpath E:\MongoDB\data
 
 
