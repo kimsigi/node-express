@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const controller = require("@biz/users/controller/userController");
 
+router.post("/login", controller.login );
+
 // 회원 전체 목록 조회
 router.get("/", controller.getAllUsers );
 
