@@ -52,6 +52,7 @@ const deleteUser = async (id) => {
 }
 
 module.exports = {
+    login,
     getAllUsers,
     getUserById,
     createUser,
