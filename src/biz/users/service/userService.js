@@ -1,5 +1,14 @@
 const User = require("@biz/users/model/user");
 
+const login = async (params) => {
+    
+    const user = await User.findOne(params);
+    if (!user) {
+        throw new Error("User not found");
+    }
+    return user;
+}
+
 const getAllUsers = async () => {
     try {
         return await User.find();
