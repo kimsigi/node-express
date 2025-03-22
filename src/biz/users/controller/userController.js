@@ -3,7 +3,7 @@ const service = require("@biz/users/service/userService");
 const login = async (req, res) => {
   try {
     const user = await service.login(req.body);
-    res.status(200).json(user);
+    res.json({user: user, token: 'fake-jwt-token'});
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -12,6 +12,15 @@ const login = async (req, res) => {
 const getAllUsers = async (req, res) => {
   try {
     const users = await service.getAllUsers();
+    res.status(200).json(users);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
+}
+
+const getList = async (req, res) => {
+  try {
+    const users = await service.getList(req.body);
     res.status(200).json(users);
   } catch (error) {
     res.status(500).json({ error: error.message });
@@ -57,6 +66,7 @@ const deleteUser = async (req, res) => {
 module.exports = {
   login,
   getAllUsers,
+  getList,
   getUserById,
   createUser,
   updateUser,
